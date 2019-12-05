@@ -8,6 +8,12 @@
                 text-align: center;
                 font-size: 80px;
             }
+            h2 {
+                font-family: 'Sulphur Point', sans-serif;
+                text-align: center;
+                font-size: 30px;
+                
+            }
             p {
                 font-family: 'Sulphur Point', sans-serif;
                 display: block;
@@ -17,6 +23,15 @@
                 margin-right: 1em;
                 text-align: center;
             }
+            body {
+                font-family: 'Sulphur Point', sans-serif;
+                display: block;
+                margin-top: 1em;
+                margin-bottom: 1em;
+                margin-left: 3em;
+                margin-right: 3em;
+                background-color: #cce6ff
+            }
         </style>
     </head>
     <body>
@@ -24,5 +39,15 @@
         <h1>Time Calculator</h1>
         <hr>
         <p>Ever need to calculate just how much time you spent doing something? Well, you're in the right place!</p>
+        <h2>Enter the two times below</h2>
+        <form name="times">
+            <label for="firsttime">Starting Time</label>
+            <input type="datetime-local" name="firsttime">
+            <br>
+            <label for="secondtime">Ending Time</label>
+            <input type="datetime-local" name="secondtime">
+            <br>
+        </form>
+        <button id = "submit">Submit</button>
     </body>
 </html>
