@@ -4,10 +4,13 @@ function ready() {
     let timet = thyme.elements.secondtime;
     var time1 = new Date(timeo);
     var time2 = new Date(timet);
-    var Time_Difference = time2.getTime() - time1.getTime(); 
+    var Day_Difference = time2.getDay() - time1.getDay(); 
+    var Hour_Difference = time2.getHours() - time1.getHours(); 
+    var Minute_Difference = time2.getMinutes() - time1.getMinutes(); 
+
     submit.onclick = function () { // go is a button on the page
         let el = document.createElement('p')
-        el.innerHTML = "Your elapsed time was: " + Time_Difference;
+        el.innerHTML = "Your elapsed time was: " + Day_Difference + " " + Hour_Difference + " " + Minute_Difference;
         console.log("worked")
         results.append(el);
     }
