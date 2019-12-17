@@ -5,9 +5,13 @@ h1 {
 }
 h2 {
     font-family: 'Sulphur Point', sans-serif;
-    text-align: left;
     font-size: 30px;
     
+}
+h3 {
+    font-family: 'Sulphur Point', sans-serif;
+    text-align: center;
+    font-size: 30px;
 }
 p {
     font-family: 'Sulphur Point', sans-serif;
@@ -30,4 +34,29 @@ body {
 table {
     border: 1px solid black;
     text-align: center;
+    background:white;
 }
+
+.tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+  }
+  
+  .tablink:hover {
+    background-color: #777;
+  }
+  
+  /* Style the tab content (and add height:100% for full page content) */
+  .tabcontent {
+    display: none;
+    padding: 100px 20px;
+    height: 100%;
+    margin-bottom: 100px;
+  }

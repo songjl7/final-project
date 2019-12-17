@@ -25,12 +25,15 @@ function ready() {
             minutes = (minutes < 10) ? "0" + minutes : minutes;
             seconds = (seconds < 10) ? "0" + seconds : seconds;
           
-            return days + " days, " + hours + " hours, " + minutes + " minutes, " + seconds + " seconds, and " + milliseconds + " milliseconds.";
+            return days + " days, " + hours + " hours, " + minutes + " minutes, and " + seconds + " seconds.";
         }
-        let el = document.createElement('p')
+        let el = document.createElement('h3')
         let stuff = document.createElement('img')
+        stuff.src = "blue.jpg"
 
-        if (diff )
+        if (diff % 3600 == 0) {
+            resultes.append(stuff)
+        }
         el.innerHTML = "Your elapsed time: " + msToTime(diff);
         console.log("worked");
         results.append(el);
@@ -38,3 +41,20 @@ function ready() {
 }
 
 document.addEventListener("DOMContentLoaded", ready);
+
+function openPage(pageName,elmnt,color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(pageName).style.display = "block";
+    elmnt.style.backgroundColor = color;
+  }
+
+  document.getElementById("defaultOpen").click();
+  
