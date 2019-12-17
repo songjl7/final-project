@@ -1,11 +1,5 @@
 
 function ready() {
-    var oneDay = document.createElement("img");
-    oneDay.src = "red.jpg";    
-    var oneHour = document.createElement("img");
-    var fifteenMin = document.getElementById("green");
-    var fiveMin = document.getElementById("orange");
-    var oneMin = document.getElementById("purple");
     
     submit.onclick = function () { // go is a button on the page
         var timeo = document.getElementById("first").value;
@@ -27,20 +21,11 @@ function ready() {
           
             return days + " days, " + hours + " hours, " + minutes + " minutes, and " + seconds + " seconds.";
         }
-        let el = document.createElement('h3')
-        let stuff = document.createElement('img')
-        stuff.src = "blue.jpg"
-
-        if (diff % 3600 == 0) {
-            resultes.append(stuff)
-        }
-        el.innerHTML = "Your elapsed time: " + msToTime(diff);
-        console.log("worked");
-        results.append(el);
     }
 }
 
 document.addEventListener("DOMContentLoaded", ready);
+
 
 function openPage(pageName,elmnt,color) {
     var i, tabcontent, tablinks;
@@ -54,7 +39,4 @@ function openPage(pageName,elmnt,color) {
     }
     document.getElementById(pageName).style.display = "block";
     elmnt.style.backgroundColor = color;
-  }
-
-  document.getElementById("defaultOpen").click();
-  
+}  
