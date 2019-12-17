@@ -10,6 +10,7 @@
         <h1 class = "bigtext">On-The-Go Calculator</h1>
         <button class="tablink" onclick="openPage('Time Calculator', this, 'black')" id="defaultOpen">Time Calculator</button>
         <button class="tablink" onclick="openPage('Unit Converter', this, 'black')">Unit Converter</button>
+        <button class="tablink" onclick="openPage('Currency Converter', this, 'black')">Currency Converter</button>
         <button class="tablink" onclick="openPage('Horoscope Finder', this, 'black')">Horoscope Finder</button>
     
         <div id="Time Calculator" class="tabcontent timecalc">
@@ -54,7 +55,7 @@
 
         <div id="Unit Converter" class="tabcontent unitcon">
             <h2>Unit Converter</h2>
-            <p>Ever need to convert units of measurement on the go? Well, you're still in the right place!</p>
+            <p>Ever need to convert units of measurement on the go? Well, you're in the right place!</p>
             <hr class = "dotted">
             
             <h3>Units of Length</h3>
@@ -123,6 +124,32 @@
                     </tr>
                     <tr>
                         <td><br><label>Grams</label><br><input onblur=gconvert() name=gram value=1000></td>
+                    </tr>
+                    <tr>
+                        <td width="50%"><p><input type="button" class = "button" value="Submit" name="B4"></p></td>
+                    </tr>
+                </tbody>
+            </form></table>
+        </div>
+
+        <div id = "Currency Converter" class = "tabcontent curcon">
+            <h2>Currency Converter</h2>
+            <p>Ever need to convert one form of currency to another? Well, you're in the right place!</p>
+            <hr class = "dotted">
+            <p>Enter a value into one of the boxes below and click the button to see the conversion!</p>
+            <form name=moneys method="post">
+                    <tbody>
+                    <tr>
+                        <td><label>US Dollar</label><br><input onblur=usdconvert() name=usd value=1> </td>
+                    </tr>
+                    <tr>
+                        <td><br><label>Euro</label><br><input onblur=euroconvert() name=euro value=0.9></td>
+                    </tr>
+                    <tr>
+                        <td><br><label>Pound Sterling</label><br><input onblur=epoundconvert() name=epound value=0.67></td>
+                    </tr>
+                    <tr>
+                        <td><br><label>Yuan</label><br><input onblur=yuanconvert() name=yuan value=7></td>
                     </tr>
                     <tr>
                         <td width="50%"><p><input type="button" class = "button" value="Submit" name="B4"></p></td>

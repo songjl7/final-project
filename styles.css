@@ -47,6 +47,15 @@ p {
     background-size: cover;
 }
 
+.curcon {
+    font-family: 'Sulphur Point', sans-serif;
+    max-width: 100%;
+    background-image: url('money.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: cover;
+}
+
 .horoscope {
     font-family: 'Sulphur Point', sans-serif;
     max-width: 100%;

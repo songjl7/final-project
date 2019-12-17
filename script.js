@@ -146,10 +146,45 @@ function lbconvert(){
 function gconvert(){
     with (document.kgtolb){
         kilogram.value = roundit(gram.value / 1000);
-        pound.value = roundit(gram.value / 453.592)
+        pound.value = roundit(gram.value / 453.592);
     }
 }
 
+// ---------------------------------------------------------
+
+function usdconvert(){
+    with (document.moneys){
+        euro.value = roundit(usd.value * 0.9);
+        epound.value = roundit(usd.value * 0.76);
+        yuan.value = roundit(usd.value * 7);
+    }
+}
+
+function euroconvert(){
+    with (document.moneys){
+        usd.value = roundit(euro.value / 0.9);
+        epound.value = roundit(euro.value / 1.18);
+        yuan.value = roundit(euro.value * 7.8)
+    }
+}
+
+function epoundconvert(){
+    with (document.moneys){
+        usd.value = roundit(epound.value / 0.76);
+        euro.value = roundit(epound.value * 1.18);
+        yuan.value = roundit(epound.value * 9.18);
+    }
+}
+
+function yuanconvert(){
+    with (document.moneys){
+        usd.value = roundit(yuan.value / 7);
+        epound.value = roundit(yuan.value / 9.18);
+        euro.value = roundit(yuan.value / 7.8);
+    }
+}
+
+//-------------------------------------------------------
 
 function openPage(pageName,elmnt,color) {
     var i, tabcontent, tablinks;
