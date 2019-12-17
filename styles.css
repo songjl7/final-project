@@ -80,3 +80,11 @@ table {
     margin: 4px 2px;
     cursor: pointer;
 }
+
+.dotted {
+    border-bottom: 5px dashed black;
+}
+
+.bigtext {
+    background: white;
+}

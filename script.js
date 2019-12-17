@@ -37,27 +37,61 @@ function ready() {
 document.addEventListener("DOMContentLoaded", ready);
 
 function roundit(which){
-    return Math.round(which*100)/100
-    }
-    
-    function cmconvert(){
+return Math.round(which*100)/100
+}
+
+function cmconvert(){
     with (document.cminch){
-    feet.value = roundit(cm.value/30.84);
-    inch.value = roundit(cm.value/2.54);
+        feet.value = roundit(cm.value/30.84);
+        inch.value = roundit(cm.value/2.54);
     }
-    }
-    
-    function inchconvert(){
+}
+
+function inchconvert(){
     with (document.cminch){
-    cm.value = roundit(inch.value*2.54);
-    feet.value=roundit(inch.value/12);
+        cm.value = roundit(inch.value*2.54);
+        feet.value=roundit(inch.value/12);
+        meter.value=roundit(inch.value/0.0254);
     }
-    }
-    
-    function feetconvert(){
+}
+
+function feetconvert(){
     with (document.cminch){
-    cm.value=roundit(feet.value*30.48);
-    inch.value=roundit(feet.value*12);
+        cm.value=roundit(feet.value*30.48);
+        inch.value=roundit(feet.value*12);
+        meter.value=roundit(feet.value/3.281);
+    }
+}
+
+function meterconvert(){
+    with (document.cminch){
+        cm.value=roundit(meter.value*100);
+        inch.value=roundit(meter.value/0.0254);
+        feet.value=roundit(meter.value*3.281);
+    }
+}
+
+function celsiconvert(){
+    with (document.ctof){
+        fahrenheit.value = roundit((1.8 * celsius.value) + 32);
+    }
+}
+
+function fahrenconvert(){
+    with (document.ctof){
+        celsius.value = roundit(((fahrenheit.value - 32)*5)/9);
+    }
+}
+
+function kmconvert(){
+    with (document.kmtomi){
+        mile.value = roundit(kilometer.value * 0.621);
+    }
+}
+
+function miconvert(){
+    with (document.kmtomi){
+        kilometer.value = roundit(mile.value / 0.621);
     }
 }
 

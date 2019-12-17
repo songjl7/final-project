@@ -7,13 +7,14 @@
     <body>
         <script src = script.js></script>
         <center>
+        <h1 class = "bigtext">On-The-Go Calculator</h1>
         <button class="tablink" onclick="openPage('Time Calculator', this, 'black')" id="defaultOpen">Time Calculator</button>
         <button class="tablink" onclick="openPage('Unit Converter', this, 'black')">Unit Converter</button>
         <div id="Time Calculator" class="tabcontent">
             <h1>Time Calculator</h1>
             <p>Ever need to calculate just how much time you spent doing something? Well, you're in the right place!</p>
             <p>This website calculates the time between two given times!</p>
-            <hr>
+            <hr class = "dotted">
             <!-- <table>
                 <tr>
                     <th>Color</th>
@@ -53,7 +54,8 @@
         <div id="Unit Converter" class="tabcontent">
             <h1>Unit Converter</h1>
             <p>Ever need to convert units of measurement on the go? Well, you're still in the right place!</p>
-            <hr>
+            <hr class = "dotted">
+            
             <h3>Units of Length</h3>
             <p>Enter just one unit of length in any of the boxes below, press submit, and see all the conversions!</p>
             <form name=cminch method="post">
@@ -62,13 +64,52 @@
                     <td><label>Centimeters</label><br><input onblur=cmconvert() value=2.54 name=cm> </td>
                 </tr>
                 <tr>
-                    <td><br><label>Feet</label><br><input onblur=feetconvert() value=0 name=feet></td>
-                </tr>
-                <tr>
                     <td><br><label>Inches</label><br><input onblur=inchconvert() value=1 name=inch></td>
                 </tr>
-                <tr><td width="50%"><p><input type="button" class = "button" value="Submit" name="B3"></p></td>
-                </tr></tbody></form></table>
+                <tr>
+                    <td><br><label>Feet</label><br><input onblur=feetconvert() value=0.083 name=feet></td>
+                </tr>
+                <tr>
+                    <td><br><label>Meters</label><br><input onblur=meterconvert() value=0.0254 name=meter></td>
+                </tr>
+                <tr>
+                    <td width="50%"><p><input type="button" class = "button" value="Submit" name="B3"></p></td>
+                </tr>
+
+            </tbody></form></table>
+            <hr>
+            <h3>Units of Temperature</h3>
+            <p>Enter a value into one of the two boxes below and click the button to see the conversion!</p>
+            <form name=ctof method="post">
+                    <tbody>
+                    <tr>
+                        <td><label>Degrees in Celsius</label><br><input onblur=celsiconvert() name=celsius value=0> </td>
+                    </tr>
+                    <tr>
+                        <td><br><label>Degrees in Fahrenheit</label><br><input onblur=fahrenconvert() name=fahrenheit value=32></td>
+                    </tr>
+                    <tr>
+                        <td width="50%"><p><input type="button" class = "button" value="Submit" name="B4"></p></td>
+                    </tr>
+                </tbody>
+            </form></table>
+            <hr>
+            <h3>Units of Distance</h3>
+            <p>Enter a value into one of the two boxes below and click the button to see the conversion!</p>
+            <form name=kmtomi method="post">
+                    <tbody>
+                    <tr>
+                        <td><label>Kilometers</label><br><input onblur=kmconvert() name=kilometer value=1> </td>
+                    </tr>
+                    <tr>
+                        <td><br><label>Miles</label><br><input onblur=miconvert() name=mile value=0.621></td>
+                    </tr>
+                    <tr>
+                        <td width="50%"><p><input type="button" class = "button" value="Submit" name="B4"></p></td>
+                    </tr>
+                </tbody>
+            </form></table>
+        </div>
     </center>
     </body>
 </html>
