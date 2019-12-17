@@ -1,3 +1,6 @@
+setTimeout(() => {
+    alert("Thanks for visiting LiAn Song's website!");
+}, 000)
 
 function ready() {
     // var oneDay = document.createElement("img");
@@ -5,7 +8,19 @@ function ready() {
     // var fifteenMin = document.getElementById("green");
     // var fiveMin = document.getElementById("orange");
     // var oneMin = document.getElementById("purple");
-    
+    let i = 0
+        setInterval(function(){
+            let color = ["black","red","blue"]
+            document.getElementById('colors').style.color = color[i]
+            if(i == 2){
+                i = 0
+            } else {
+                i++
+            }
+        }, 500);
+    }
+
+      
     submit.onclick = function () { // go is a button on the page
         var timeo = document.getElementById("first").value;
         var timet = document.getElementById("second").value;
@@ -199,3 +214,4 @@ function openPage(pageName,elmnt,color) {
     document.getElementById(pageName).style.display = "block";
     elmnt.style.backgroundColor = color;
 }  
+
