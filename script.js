@@ -38,11 +38,30 @@ function ready() {
         var day = document.getElementById("birthday").value;
         let end = document.createElement('h3');
         var horo = "";
-        if ((month == 3) && (day >= 21)) {
+        if (((month == 3) && (day >= 20)) || ((month == 4) && (day <= 21))) {
             horo = "Aries";
-        }
-        else if ((month == 4) && (day <= 20)) {
-            horo = "Aries";
+        } else if (((month == 4) && (day >= 20)) || ((month == 5) && (day <= 21))) {
+            horo = "Taurus";
+        } else if (((month == 5) && (day >= 22)) || ((month == 6) && (day <= 21))) {
+            horo = "Gemini";
+        } else if (((month == 6) && (day >= 22)) || ((month == 7) && (day <= 23))) {
+            horo = "Cancer";
+        } else if (((month == 7) && (day >= 24)) || ((month == 8) && (day <= 23))) {
+            horo = "Leo";
+        } else if (((month == 8) && (day >= 24)) || ((month == 9) && (day <= 23))) {
+            horo = "Virgo";
+        } else if (((month == 9) && (day >= 24)) || ((month == 10) && (day <= 23))) {
+            horo = "Libra";
+        } else if (((month == 10) && (day >= 24)) || ((month == 11) && (day <= 22))) {
+            horo = "Scorpio";
+        } else if (((month == 11) && (day >= 23)) || ((month == 12) && (day <= 22))) {
+            horo = "Sagittarius"
+        } else if (((month == 12) && (day >= 23)) || ((month == 1) && (day <= 20))) {
+            horo = "Capricorn";
+        } else if (((month == 1) && (day >= 21)) || ((month == 2) && (day <= 19))) {
+            horo = "Aquarius";
+        } else {
+            horo = "Pisces";
         }
         end.innerHTML = "Horoscope is: " + horo;
         horoscopey.append(end)
