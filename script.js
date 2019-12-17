@@ -1,5 +1,10 @@
 
 function ready() {
+    // var oneDay = document.createElement("img");
+    // var oneHour = document.createElement("img");
+    // var fifteenMin = document.getElementById("green");
+    // var fiveMin = document.getElementById("orange");
+    // var oneMin = document.getElementById("purple");
     
     submit.onclick = function () { // go is a button on the page
         var timeo = document.getElementById("first").value;
@@ -21,11 +26,40 @@ function ready() {
           
             return days + " days, " + hours + " hours, " + minutes + " minutes, and " + seconds + " seconds.";
         }
+
+        let el = document.createElement('h3');
+        el.innerHTML = "Your elapsed time: " + msToTime(diff);
+        console.log("worked");
+        results.append(el);
     }
-}
+}    
 
 document.addEventListener("DOMContentLoaded", ready);
 
+function roundit(which){
+    return Math.round(which*100)/100
+    }
+    
+    function cmconvert(){
+    with (document.cminch){
+    feet.value = roundit(cm.value/30.84);
+    inch.value = roundit(cm.value/2.54);
+    }
+    }
+    
+    function inchconvert(){
+    with (document.cminch){
+    cm.value = roundit(inch.value*2.54);
+    feet.value=roundit(inch.value/12);
+    }
+    }
+    
+    function feetconvert(){
+    with (document.cminch){
+    cm.value=roundit(feet.value*30.48);
+    inch.value=roundit(feet.value*12);
+    }
+}
 
 function openPage(pageName,elmnt,color) {
     var i, tabcontent, tablinks;

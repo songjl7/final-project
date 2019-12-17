@@ -46,22 +46,29 @@
                 <input type="datetime-local" name="secondtime" id="second">
                 <br>
             </form>
-            <button id = "submit">Submit</button>
+            <button class="button" id = "submit">Submit</button>
             <p id = "results"></p>
-            <div id="gallery"></div>
         </div>
 
         <div id="Unit Converter" class="tabcontent">
             <h1>Unit Converter</h1>
             <p>Ever need to convert units of measurement on the go? Well, you're still in the right place!</p>
             <hr>
-            <form name="conversions">
-                <label for="intocm">Inches to cm</label>
-                <input type="number" name ="intocm">
-                <button id= "submitintocm">Submit</button>
-            </form>
-
-        </div>
+            <h3>Units of Length</h3>
+            <p>Enter just one unit of length in any of the boxes below, press submit, and see all the conversions!</p>
+            <form name=cminch method="post">
+                <tbody>
+                <tr>
+                    <td><label>Centimeters</label><br><input onblur=cmconvert() value=2.54 name=cm> </td>
+                </tr>
+                <tr>
+                    <td><br><label>Feet</label><br><input onblur=feetconvert() value=0 name=feet></td>
+                </tr>
+                <tr>
+                    <td><br><label>Inches</label><br><input onblur=inchconvert() value=1 name=inch></td>
+                </tr>
+                <tr><td width="50%"><p><input type="button" class = "button" value="Submit" name="B3"></p></td>
+                </tr></tbody></form></table>
     </center>
     </body>
 </html>
