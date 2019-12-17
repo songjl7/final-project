@@ -10,7 +10,7 @@
         <h1 class = "bigtext">On-The-Go Calculator</h1>
         <button class="tablink" onclick="openPage('Time Calculator', this, 'black')" id="defaultOpen">Time Calculator</button>
         <button class="tablink" onclick="openPage('Unit Converter', this, 'black')">Unit Converter</button>
-        <div id="Time Calculator" class="tabcontent">
+        <div id="Time Calculator" class="tabcontent timecalc">
             <h1>Time Calculator</h1>
             <p>Ever need to calculate just how much time you spent doing something? Well, you're in the right place!</p>
             <p>This website calculates the time between two given times!</p>
@@ -51,7 +51,7 @@
             <p id = "results"></p>
         </div>
 
-        <div id="Unit Converter" class="tabcontent">
+        <div id="Unit Converter" class="tabcontent unitcon">
             <h1>Unit Converter</h1>
             <p>Ever need to convert units of measurement on the go? Well, you're still in the right place!</p>
             <hr class = "dotted">
@@ -103,6 +103,25 @@
                     </tr>
                     <tr>
                         <td><br><label>Miles</label><br><input onblur=miconvert() name=mile value=0.621></td>
+                    </tr>
+                    <tr>
+                        <td width="50%"><p><input type="button" class = "button" value="Submit" name="B4"></p></td>
+                    </tr>
+                </tbody>
+            </form></table>
+            <hr>
+            <h3>Units of Mass</h3>
+            <p>Enter a value into one of the boxes below and click the button to see the conversion!</p>
+            <form name=kgtolb method="post">
+                    <tbody>
+                    <tr>
+                        <td><label>Kilograms</label><br><input onblur=kgconvert() name=kilogram value=1> </td>
+                    </tr>
+                    <tr>
+                        <td><br><label>Pounds</label><br><input onblur=lbconvert() name=pound value=2.2></td>
+                    </tr>
+                    <tr>
+                        <td><br><label>Grams</label><br><input onblur=gconvert() name=gram value=1000></td>
                     </tr>
                     <tr>
                         <td width="50%"><p><input type="button" class = "button" value="Submit" name="B4"></p></td>

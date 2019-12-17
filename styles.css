@@ -22,26 +22,34 @@ p {
     margin-right: 1em;
     text-align: center;
 }
-body {
+.timecalc {
     font-family: 'Sulphur Point', sans-serif;
     max-width: 100%;
     background-image: url('original.png');
     background-repeat: no-repeat;
     background-attachment: fixed; 
     background-size: cover;
-    background-color: white;
+}
+
+.unitcon {
+    font-family: 'Sulphur Point', sans-serif;
+    max-width: 100%;
+    background-image: url('scale.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: cover;
 }
 
 label {
     font-family: 'Sulphur Point', sans-serif;
     font-size: 18px;
 }
-
+/* 
 table {
     border: 1px solid black;
     text-align: center;
     background:white;
-}
+} */
 
 .tablink {
     background-color: #555;
@@ -63,7 +71,6 @@ table {
 .tabcontent {
     display: none;
     padding: 100px 20px;
-    height: 100%;
     margin-bottom: 100px;
 }
 

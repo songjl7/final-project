@@ -95,6 +95,28 @@ function miconvert(){
     }
 }
 
+function kgconvert(){
+    with (document.kgtolb){
+        pound.value = roundit(kilogram.value * 2.2);
+        gram.value = roundit(kilogram.value * 1000);
+    }
+}
+
+function lbconvert(){
+    with (document.kgtolb){
+        kilogram.value = roundit(pound.value / 2.2);
+        gram.value = roundit(pound.value * 453.592);
+    }
+}
+
+function gconvert(){
+    with (document.kgtolb){
+        kilogram.value = roundit(gram.value / 1000);
+        pound.value = roundit(gram.value / 453.592)
+    }
+}
+
+
 function openPage(pageName,elmnt,color) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
