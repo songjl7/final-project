@@ -32,6 +32,21 @@ function ready() {
         console.log("worked");
         results.append(el);
     }
+
+    submit2.onclick = function () {
+        var month = document.getElementById("birthmonth").value;
+        var day = document.getElementById("birthday").value;
+        let end = document.createElement('h3');
+        var horo = "";
+        if ((month == 3) && (day >= 21)) {
+            horo = "Aries";
+        }
+        else if ((month == 4) && (day <= 20)) {
+            horo = "Aries";
+        }
+        end.innerHTML = "Horoscope is: " + horo;
+        horoscopey.append(end)
+    }
 }    
 
 document.addEventListener("DOMContentLoaded", ready);

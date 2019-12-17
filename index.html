@@ -10,10 +10,11 @@
         <h1 class = "bigtext">On-The-Go Calculator</h1>
         <button class="tablink" onclick="openPage('Time Calculator', this, 'black')" id="defaultOpen">Time Calculator</button>
         <button class="tablink" onclick="openPage('Unit Converter', this, 'black')">Unit Converter</button>
+        <button class="tablink" onclick="openPage('Horoscope Finder', this, 'black')">Horoscope Finder</button>
+    
         <div id="Time Calculator" class="tabcontent timecalc">
-            <h1>Time Calculator</h1>
+            <h2>Time Calculator</h2>
             <p>Ever need to calculate just how much time you spent doing something? Well, you're in the right place!</p>
-            <p>This website calculates the time between two given times!</p>
             <hr class = "dotted">
             <!-- <table>
                 <tr>
@@ -39,7 +40,7 @@
                     <td><img id="purple" src = purple.jpg></td>                        <td>1 minute</td>
                 </tr>
             </table> -->
-            <h2>Enter the two times below</h2>
+            <h4>Enter the two times below</h4>
             <form name="times">
                 <label for="firsttime">Starting Time</label>                    <input type="datetime-local" name="firsttime" id="first">
                 <br>
@@ -52,7 +53,7 @@
         </div>
 
         <div id="Unit Converter" class="tabcontent unitcon">
-            <h1>Unit Converter</h1>
+            <h2>Unit Converter</h2>
             <p>Ever need to convert units of measurement on the go? Well, you're still in the right place!</p>
             <hr class = "dotted">
             
@@ -128,6 +129,21 @@
                     </tr>
                 </tbody>
             </form></table>
+        </div>
+
+        <div id = "Horoscope Finder" class="tabcontent horoscope">
+            <h2>Horoscope Finder</h2>
+            <p>Ever need to find what horoscope someone is? Well, you're in the right place!</p>
+            <hr class = "dotted">
+            <form>
+                <label>Enter birth month here</label>
+                <input type=number id="birthmonth">
+                <br>
+                <label>Enter birth day here</label>
+                <input type=number id="birthday">
+            </form>
+            <button class="go" id = "submit2">Submit</button>
+            <p id = "horoscopey"></p>
         </div>
     </center>
     </body>
