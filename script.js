@@ -2,6 +2,7 @@ setTimeout(() => {
     alert("Thanks for visiting LiAn Song's website!");
 }, 000)
 
+
 function ready() {
     // var oneDay = document.createElement("img");
     // var oneHour = document.createElement("img");
@@ -9,7 +10,7 @@ function ready() {
     // var fiveMin = document.getElementById("orange");
     // var oneMin = document.getElementById("purple");
     let i = 0
-        setInterval(function(){
+    setInterval(function(){
             let color = ["black","red","blue"]
             document.getElementById('colors').style.color = color[i]
             if(i == 2){
@@ -18,7 +19,7 @@ function ready() {
                 i++
             }
         }, 500);
-    }
+    
 
       
     submit.onclick = function () { // go is a button on the page
@@ -81,9 +82,11 @@ function ready() {
         end.innerHTML = "Horoscope is: " + horo;
         horoscopey.append(end)
     }
-}    
+   
 
+}
 document.addEventListener("DOMContentLoaded", ready);
+
 
 function roundit(which){
 return Math.round(which*100)/100
